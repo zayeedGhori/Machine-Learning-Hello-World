@@ -39,12 +39,12 @@ print(iris.target_names)
 print(test_data)
 
 # Code to visualize the decision tree
-# import graphviz
+import graphviz
 
-# dot_data = tree.export_graphviz(clf, out_file=None,
-#                             feature_names=iris.feature_names,
-#                             class_names=iris.target_names,
-#                             filled=True, rounded=True,
-#                             impurity=False)
-# graph = graphviz.Source(dot_data) 
-# graph.render("irisML") 
+dot_data = tree.export_graphviz(clf, out_file=None,
+                            feature_names=iris.feature_names,
+                            class_names=iris.target_names,
+                            filled=True, rounded=True,
+                            impurity=False)
+graph = graphviz.Source(dot_data) 
+graph.render("irisML") 
